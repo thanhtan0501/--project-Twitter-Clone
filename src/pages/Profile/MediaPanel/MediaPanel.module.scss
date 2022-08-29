@@ -1,0 +1,42 @@
+.mediaPanel {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.media-panel-tweet {
+    max-width: 400px;
+    width: 100%;
+    margin: 32px auto;
+    padding: 0 32px;
+}
+.media-panel-image {
+    margin-top: 16px;
+    margin-bottom: 36px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+.title {
+    margin-bottom: 8px;
+    line-height: 36px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: left;
+    color: rgb(15, 20, 25);
+    word-wrap: break-word;
+}
+.subtitle {
+    color: rgb(83, 100, 113);
+    margin-bottom: 28px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 20px;
+}

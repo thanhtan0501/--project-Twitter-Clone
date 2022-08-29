@@ -1,0 +1,120 @@
+.feed {
+    // flex: 0.4;
+    position: relative;
+
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 672px;
+    width: 600px;
+    min-width: fit-content;
+    overflow-y: scroll;
+    border-right: 1px solid rgb(239, 243, 244);
+}
+
+@media screen and (max-width: 712px) {
+    .feed {
+        width: auto;
+    }
+}
+@media screen and (min-width: 640px) {
+    .feed {
+        // margin-left: 73px;
+    }
+    .header {
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .feed {
+        // margin-left: 370px;
+    }
+}
+
+// .feed::-webkit-scrollbar-track {
+//     margin-top: 53px;
+// }
+
+// Hidden scrollbar for Chrome, Safari, Opera
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+// Hide Scrollbar for IE, Edge, Firefox.
+.feed {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+}
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 601px;
+    height: 53px;
+    padding-left: 17px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+.title {
+    h2 {
+        font-size: 2.1rem;
+        font-weight: 600;
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+
+    &:hover {
+        background-color: rgba(15, 20, 25, 0.1);
+        border-radius: 9999px;
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+}
+.nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    height: 100%;
+}
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
+    min-width: 56px;
+    height: 53px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(15, 20, 25, 0.1);
+        // border-radius: 9999px;
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+    span {
+        padding: 16px 0;
+        color: rgb(15, 20, 25);
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 20px;
+    }
+}

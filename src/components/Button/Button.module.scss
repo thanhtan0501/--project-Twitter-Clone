@@ -1,0 +1,93 @@
+.wrapper {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 999999px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+    font-family: var(--font-family);
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.title + .icon,
+.icon + .title {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    img {
+        width: 100%;
+    }
+}
+
+// Button types
+.rounded {
+    border-radius: 100px;
+    border-color: rgba(22, 24, 35, 0.12);
+    box-shadow: 0 2px 8px rgb(0 0 0 /6%);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            )
+            rgb(26, 140, 216);
+        transition: background-color 500ms ease-out;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+        border-color: currentColor;
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Disabled
+
+// Button size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.large {
+    min-width: 226px;
+    padding: 16px 16px;
+}

@@ -1,0 +1,128 @@
+.modal-dialog {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 800px;
+    padding: 16px 16px 80px 16px;
+    text-align: center;
+}
+.dialog-overlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgb(91, 112, 131, 0.4);
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.container {
+    position: sticky;
+
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    border-radius: 16px;
+    text-align: left;
+    overflow: hidden;
+    height: 500px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 6px;
+
+    .title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .next-btn {
+        button {
+            padding: 7px 6px !important;
+            font-size: 1.5rem;
+        }
+    }
+}
+.close-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10000;
+
+    &:hover {
+        background-color: rgba(15, 20, 25, 0.1);
+        border-radius: 9999px;
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+    svg {
+        height: 22px;
+    }
+}
+.content {
+    display: flex;
+    padding: 0 8px 10px;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    .wrapper {
+        width: 100%;
+        .search-input {
+            background-color: transparent;
+            &:focus-within {
+                border-color: transparent;
+            }
+            svg {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .close-icon {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (min-width: 640px) {
+    .modal-container {
+        display: block;
+        padding: 0;
+        min-height: 100vh;
+    }
+    .container {
+        margin: 32px 0;
+        vertical-align: middle;
+        max-width: 576px;
+        width: 100%;
+    }
+    .content {
+        // padding-left: 24px;
+        // padding-right: 24px;
+    }
+    .text-title {
+        line-height: 20px;
+    }
+}

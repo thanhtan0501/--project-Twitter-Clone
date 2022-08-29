@@ -1,0 +1,235 @@
+.list-page {
+    // flex: 0.4;
+    position: relative;
+
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 672px;
+    width: 600px;
+    min-width: fit-content;
+    overflow-y: scroll;
+    border-right: 1px solid rgb(239, 243, 244);
+}
+.list-page::-webkit-scrollbar {
+    display: none;
+}
+
+// Hide Scrollbar for IE, Edge, Firefox.
+.list-page {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media screen and (max-width: 712px) {
+    .list-page {
+        width: auto;
+    }
+}
+
+.list-page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 53px;
+    padding-left: 17px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+.list-page-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .back-icon {
+        margin-right: 25px;
+    }
+
+    .title {
+        h2 {
+            color: rgb(15, 20, 25);
+            padding: 2px 0;
+            color: rgb(15, 20, 25);
+            font-size: 2.1rem;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+}
+.follow-username {
+    color: rgb(83, 100, 113);
+    line-height: 16px;
+    font-size: 1.3rem;
+
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.icons-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+
+    &:hover {
+        background-color: rgba(15, 20, 25, 0.1);
+        border-radius: 9999px;
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+.list-page-info {
+    border-bottom: 1px solid rgb(239, 243, 244);
+}
+.list-page-background {
+    outline: none;
+    overflow: hidden;
+    max-height: 200px;
+    max-width: 600px;
+
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // position: absolute;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+.list-page-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+.list-page-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 100%;
+    color: rgb(15, 20, 25);
+    line-height: 24px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-align: center;
+}
+.list-page-info-name {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    max-width: 100%;
+    h4 {
+        color: rgb(15, 20, 25);
+        line-height: 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        white-space: nowrap;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    span {
+        margin-left: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        word-wrap: break-word;
+
+        color: rgb(83, 100, 113);
+        line-height: 16px;
+    }
+}
+.author-avatar {
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+// .info {
+//     display: flex;
+//     // flex-direction: column;
+//     align-items: center;
+// }
+.list-page-info-follow {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .follow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(15, 20, 25);
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 400;
+        word-wrap: break-word;
+        line-height: 16px;
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+        span {
+            font-size: 1.4rem;
+
+            color: rgb(83, 100, 113);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.list-page-follow-btn {
+    margin: 20px 0 12px;
+}
+.following-btn {
+    min-width: 77px;
+    font-size: 1.4rem;
+    min-height: 32px;
+    align-items: center;
+}
+.follow-btn {
+    align-items: center;
+    min-width: 77px;
+    background-color: rgb(15, 20, 25);
+    min-height: 32px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    &:hover {
+        background-color: rgba(39, 44, 48);
+        transition: background-color 100ms ease-out;
+    }
+}

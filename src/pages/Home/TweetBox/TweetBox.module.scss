@@ -1,0 +1,171 @@
+.tweet-box {
+    display: flex;
+    // margin-top: 57px;
+    margin-bottom: 4px;
+    padding: 4px 16px 13px 16px;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgb(239, 243, 244);
+    overflow-y: scroll;
+}
+.box-avatar {
+    padding-top: 4px;
+    margin-right: 12px;
+}
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.box-input {
+    width: 100%;
+    padding-top: 4px;
+}
+.tweet-box-input {
+    // width: 100%;
+
+    padding: 12px 0;
+    position: relative;
+    border: 2px solid #fff;
+    .selectedFile {
+        padding-bottom: 28px;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 50px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: var(--font-family);
+        border: 0.1px solid transparent;
+        color: #536471;
+        padding: 2px 0;
+        z-index: 1;
+
+        outline: none;
+        user-select: text;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        background-color: transparent;
+
+        resize: none;
+        &.overflow {
+            height: 100%;
+            overflow-y: hidden;
+        }
+    }
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+// Hide Scrollbar for IE, Edge, Firefox.
+textarea {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+.image-input {
+    position: relative;
+    .upload-image {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 99999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 4px;
+        left: 4px;
+        cursor: pointer;
+        backdrop-filter: blur(4px);
+        background-color: rgba(15, 20, 25, 0.75);
+        color: var(--white);
+
+        &:hover {
+            background-color: rgba(39, 44, 48, 0.75);
+            border-radius: 50%;
+            transition: color 100ms ease-out;
+        }
+    }
+    img {
+        max-width: 100%;
+        border-radius: 16px;
+        max-height: 320px;
+        object-fit: contain;
+    }
+}
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+.items-btn {
+    margin-top: 12px;
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    // margin: -12px 0 -12px -8px;
+    color: rgb(29, 155, 240);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #e8f5fe;
+        border-radius: 9999px;
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+}
+.emoji-panel {
+    position: absolute;
+    margin-top: 450px;
+    margin-left: -40px;
+    max-width: 320px;
+    z-index: 10000;
+}
+
+em-emoji-picker {
+    --background-rgb: 85, 170, 255;
+    --border-radius: 20px;
+    --category-icon-size: 20px;
+    --color-border-hover: rgba(0, 0, 0, 0.1);
+    --color-border: rgba(0, 0, 0, 0.05);
+    --font-family: "TwitterChirp", sans-serif;
+    --font-size: 17px;
+    --rgb-accent: 29, 150, 240;
+    --rgb-background: 255, 255, 255;
+    --rgb-color: 15, 20, 25, 0.75;
+    --rgb-input: 255, 255, 255;
+    --shadow: rgb(101 119 134 / 20%) 0px 0px 15px,
+        rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+
+    height: 50vh;
+    max-width: 320px;
+    min-height: 400px;
+    max-height: 800px;
+    caret-color: rgb(29, 155, 240);
+    z-index: 10000;
+}
+
+.tweet-btn {
+    margin-top: 12px;
+    margin-left: 12px;
+    button {
+        max-height: 36px;
+        min-width: 36px;
+        font-size: 1.5rem;
+    }
+}

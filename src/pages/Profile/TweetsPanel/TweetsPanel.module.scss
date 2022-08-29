@@ -1,0 +1,193 @@
+.tweets-panel-lists {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(239, 243, 244);
+}
+.tweets-panel-lists-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+.tweets-panel-lists-header-title {
+    h4 {
+        line-height: 24px;
+        font-weight: 800;
+        font-size: 2rem;
+        color: rgb(15, 20, 25);
+    }
+    span {
+        color: rgb(83, 100, 113);
+        line-height: 16px;
+        font-size: 1.3rem;
+    }
+}
+
+.tweets-panel-list-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-lists-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    &:hover {
+        background-color: rgb(0, 0, 0, 0.05);
+        transition-property: background-color, border-color, color, opacity,
+            box-shadow, transform;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+}
+.follow-lists-container-box {
+    display: flex;
+    // flex-shrink: 1;
+    // flex-grow: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+    // padding: 12px 16px;
+}
+
+.follow-lists-box-image {
+    max-width: 96px;
+    max-height: 96px;
+    background-size: cover;
+    margin-right: 12px;
+    .box-image {
+        // width: 100%;
+        // height: 100%;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 99999px;
+        overflow: hidden;
+        &:hover {
+            filter: brightness(0.85);
+            transition: background-color 100ms ease-out;
+        }
+    }
+}
+.follow-lists-right-box {
+    // display: flex;
+}
+.follow-lists-box-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title {
+    margin-bottom: 2px;
+    color: rgb(15, 20, 25);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 20px;
+    word-wrap: break-word;
+    h4 {
+        color: rgb(15, 20, 25);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    span {
+        color: rgb(83, 100, 113);
+        font-weight: 400;
+    }
+}
+.author-info {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    max-width: 100%;
+    h4 {
+        color: rgb(15, 20, 25);
+        line-height: 16px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        white-space: nowrap;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    span {
+        margin-left: 4px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        word-wrap: break-word;
+
+        color: rgb(83, 100, 113);
+        line-height: 16px;
+    }
+}
+.author-avatar {
+    flex-basis: 16px;
+    width: 16px;
+    height: 16px;
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.info {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+}
+.following-btn {
+    min-width: 77px;
+    font-size: 1.4rem;
+    min-height: 32px;
+    align-items: center;
+}
+.follow-btn {
+    align-items: center;
+    min-width: 77px;
+    margin-left: 12px;
+    background-color: rgb(15, 20, 25);
+    min-height: 32px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    &:hover {
+        background-color: rgba(39, 44, 48);
+        transition: background-color 100ms ease-out;
+    }
+}
+.no-item {
+    display: flex;
+    align-items: center;
+
+    max-width: 400px;
+    width: 100%;
+    margin: 32px auto;
+    padding: 0 32px;
+    text-align: left;
+    color: rgb(83, 100, 113);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    word-wrap: break-word;
+
+    span {
+        margin-bottom: 28px;
+    }
+}
+.more {
+    display: flex;
+    align-self: start;
+    width: 100%;
+    padding: 16px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: transparent;
+    span {
+        color: var(--primary);
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+        transition: background-color 100ms ease-out;
+    }
+}
+.description {
+    padding-top: 4px;
+}
